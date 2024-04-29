@@ -1,5 +1,5 @@
 input_list = [15, 14, 9, 4, 46, 43, 29]
-output = 4
+search_val = 4
 
 # Find the index of an element from a list of element
 # Brute Force
@@ -13,12 +13,11 @@ def find_number(inp_list, val):
 
 
 def find_number1(inp_list, val):
-    for i in range(len(input_list)):
-        if output == input_list[i]:
-            return True
-            break
-    return False
+    for i in range(len(inp_list)):
+        if val == inp_list[i]:
+            return i
+    return -1
 
 
-print(find_number(input_list, output))
-print(find_number1(input_list, output))
+print(find_number(input_list, search_val))
+print(find_number1(input_list, search_val))
